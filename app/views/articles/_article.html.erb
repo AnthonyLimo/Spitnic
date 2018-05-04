@@ -1,0 +1,10 @@
+<h2>
+    <%= link_to article.name, article %>
+</h2>
+
+<div>
+    by <%= article.author %>
+    on <%= article.published_at.strftime('%b %d, %Y') %>
+</div>
+
+<div class="content"><%= article.content %></div>
