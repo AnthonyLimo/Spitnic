@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'articles/index'
+  #get 'articles/index'
 
-  get 'articles/show'
+  #get 'articles/show'
 
-  get 'articles/edit'
+  #get 'articles/edit'
 
   resources :articles
 

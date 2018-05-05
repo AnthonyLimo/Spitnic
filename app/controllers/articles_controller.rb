@@ -4,21 +4,25 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @artilce = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def edit
-    @artilce = Article.find(params[:id])
-    if @artilce.update_attributes(allowed_params)
-      redirect_to @artilce, notice: 'Article has been updated'
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update_attributes(allowed_params)
+      redirect_to @article, notice: 'Article has been updated'
     else
       render :edit
     end
   end
 
-  private
+  #private
 
   def allowed_params
-    params.require(:article).permit(:name,:author, :content, :published_at)
+    params.permit(:name,:author, :content, :published_at)
   end
 end
