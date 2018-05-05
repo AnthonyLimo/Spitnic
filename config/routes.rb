@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   resources :users
+
+  resources :sessions
   #get 'articles/index'
 
   #get 'articles/show'
